@@ -43,6 +43,10 @@ const SEED = {
     { id: 'AH-9', epicId: 'ah-e4', projectId: 'afrihauler', title: 'Drivers page (website)', status: 'todo', priority: 'medium', notes: '' },
     { id: 'AH-10', epicId: 'ah-e4', projectId: 'afrihauler', title: 'DMARC upgrade p=none → p=quarantine', status: 'todo', priority: 'medium', notes: 'Wait ~2-4 weeks after p=none, then upgrade' },
     { id: 'AH-11', epicId: 'ah-e4', projectId: 'afrihauler', title: 'GOIL partnership proposal follow-up', status: 'inprogress', priority: 'high', notes: 'Proposal sent April 2026' },
+    { id: 'AH-12', epicId: 'ah-e4', projectId: 'afrihauler', title: 'DVLA: Build dvla-verify Edge Function', status: 'done', priority: 'high', notes: 'Validates Ghana Card + vehicle plate format, calls api.dvla.gov.gh/v1/verify, writes immutable audit log to dvla_verification_logs' },
+    { id: 'AH-13', epicId: 'ah-e4', projectId: 'afrihauler', title: 'DVLA: Obtain API credentials (DVLA_GATEWAY_KEY + DVLA_CLIENT_SECRET)', status: 'inprogress', priority: 'high', notes: 'Pending DVLA Ghana partnership approval — credentials needed before function can go live' },
+    { id: 'AH-14', epicId: 'ah-e4', projectId: 'afrihauler', title: 'DVLA: Deploy dvla-verify to Supabase & set secrets', status: 'todo', priority: 'high', notes: 'Blocked on AH-13. Deploy once API keys received from DVLA.' },
+    { id: 'AH-15', epicId: 'ah-e4', projectId: 'afrihauler', title: 'DVLA: Wire verification into transporter onboarding UI', status: 'todo', priority: 'high', notes: 'Transporter wizard step: Ghana Card + vehicle plate check before account activation' },
     // SparesGH
     { id: 'SG-1', epicId: 'sg-e1', projectId: 'sparesgh', title: 'Phone OTP auth (Africa\'s Talking)', status: 'done', priority: 'high', notes: 'AT username: spearsgh (typo, can\'t change). Working end-to-end.' },
     { id: 'SG-2', epicId: 'sg-e1', projectId: 'sparesgh', title: 'Seller verification routing on login', status: 'done', priority: 'high', notes: 'Always routes sellers to profile unless approved' },
