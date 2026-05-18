@@ -5,8 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Tracker — Papa Nii</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    #main-tracker-content { display: none; }
+  </style>
 </head>
 <body>
+
+<script>
+  (function() {
+    const MASTER_PASS = "AfriHauler2026!";
+    if (sessionStorage.getItem("tracker_auth") !== "true") {
+      let attempt = prompt("Enter Master Password to Access AfriHauler Workspace:");
+      if (attempt === MASTER_PASS) {
+        sessionStorage.setItem("tracker_auth", "true");
+      } else {
+        alert("Unauthorized Access Denied.");
+        document.body.innerHTML = "<h1 style='color:red;text-align:center;margin-top:20%;font-family:sans-serif;'>🔒 Unauthorized Section Locked.</h1>";
+        return;
+      }
+    }
+    window.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("main-tracker-content").style.display = "block";
+    });
+  })();
+</script>
+
+<div id="main-tracker-content">
 
 <!-- NAV -->
 <nav class="nav">
@@ -276,5 +300,7 @@
 </div>
 
 <script src="app.js"></script>
+
+</div><!-- #main-tracker-content -->
 </body>
 </html>
